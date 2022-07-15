@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/Style/style.css">
+    <title>Gischa | Image Editor</title>
+</head>
+<body>
+    
+    <header>
+        <div class="title">
+            <h1 id="title">Image Editor</h1>
+            <p>By Donya</p>
+        </div>
+
+        <div class="theme">
+            <label for="theme" class="theme-mode">Dark Mode</label>
+            <label class="switch">
+                <input id="theme" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            <!-- <input id="theme" type="checkbox"> -->
+        </div>
+    </header>
+
+    <main>
+
+        <div class="display-box">
+            <div class="img-holder">
+                <img id="image" src="">
+            </div>
+            <div class="options">
+                <!-- Upload Icon -->
+                <svg id="upload-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M447.1 32h-384C28.64 32-.0091 60.65-.0091 96v320c0 35.35 28.65 64 63.1 64h384c35.35 0 64-28.65 64-64V96C511.1 60.65 483.3 32 447.1 32zM111.1 96c26.51 0 48 21.49 48 48S138.5 192 111.1 192s-48-21.49-48-48S85.48 96 111.1 96zM446.1 407.6C443.3 412.8 437.9 416 432 416H82.01c-6.021 0-11.53-3.379-14.26-8.75c-2.73-5.367-2.215-11.81 1.334-16.68l70-96C142.1 290.4 146.9 288 152 288s9.916 2.441 12.93 6.574l32.46 44.51l93.3-139.1C293.7 194.7 298.7 192 304 192s10.35 2.672 13.31 7.125l128 192C448.6 396 448.9 402.3 446.1 407.6z"/></svg>
+
+                <!-- Trash Can Icon -->
+                <svg id="delete-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z"/></svg>
+
+                <!-- Download Icon -->
+                <svg id="donwload-icon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M2 9.5A3.5 3.5 0 005.5 13H9v2.586l-1.293-1.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 15.586V13h2.5a4.5 4.5 0 10-.616-8.958 4.002 4.002 0 10-7.753 1.977A3.5 3.5 0 002 9.5zm9 3.5H9V8a1 1 0 012 0v5z" clip-rule="evenodd" />
+                </svg>
+            </div>
+        </div>
+        
+        <div class="setting-box">
+                <div class="setting-headers">
+                <!-- Setting Icon -->
+                <svg id="setting-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"/></svg>
+                <span class="line"></span>
+        </div>
+            
+            <!-- Radius -->
+            <div class="radius filter">
+                <p id="radius-title">Radius</p>
+                <input class="radius-range" type="range">
+                <span class="radius-value">0%</span>
+            </div>
+            
+            <!-- ------------------------------------ -->
+
+            <div class="setting-headers">
+                <!-- Sliders Icon -->
+                <svg id="sliders-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M0 416C0 398.3 14.33 384 32 384H86.66C99 355.7 127.2 336 160 336C192.8 336 220.1 355.7 233.3 384H480C497.7 384 512 398.3 512 416C512 433.7 497.7 448 480 448H233.3C220.1 476.3 192.8 496 160 496C127.2 496 99 476.3 86.66 448H32C14.33 448 0 433.7 0 416V416zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM352 176C384.8 176 412.1 195.7 425.3 224H480C497.7 224 512 238.3 512 256C512 273.7 497.7 288 480 288H425.3C412.1 316.3 384.8 336 352 336C319.2 336 291 316.3 278.7 288H32C14.33 288 0 273.7 0 256C0 238.3 14.33 224 32 224H278.7C291 195.7 319.2 176 352 176zM384 256C384 238.3 369.7 224 352 224C334.3 224 320 238.3 320 256C320 273.7 334.3 288 352 288C369.7 288 384 273.7 384 256zM480 64C497.7 64 512 78.33 512 96C512 113.7 497.7 128 480 128H265.3C252.1 156.3 224.8 176 192 176C159.2 176 131 156.3 118.7 128H32C14.33 128 0 113.7 0 96C0 78.33 14.33 64 32 64H118.7C131 35.75 159.2 16 192 16C224.8 16 252.1 35.75 265.3 64H480zM160 96C160 113.7 174.3 128 192 128C209.7 128 224 113.7 224 96C224 78.33 209.7 64 192 64C174.3 64 160 78.33 160 96z"/></svg>
+                <span class="line"></span>
+            </div>
+
+            <!-- Brightness -->
+            <div class="brightness filter">
+                <p id="brightness-title">Brightness</p>
+                <input class="brightness-range" type="range">
+                <span class="brightness-value">10%</span>
+            </div>
+
+            <!-- Blur -->
+            <div class="blur filter">
+                <p id="blur-title">Blur</p>
+                <input class="blur-range" type="range">
+                <span class="blur-value">0px</span>
+            </div>
+
+            <!-- Contrast -->
+            <div class="contrast filter">
+                <p id="contrast-title">Contrast</p>
+                <input class="contrast-range" type="range">
+                <span class="contrast-value">100%</span>
+            </div>
+
+            <!-- Grayscale -->
+            <div class="grayscale filter">
+                <p id="grayscale-title">Grayscale</p>
+                <input class="grayscale-range" type="range">
+                <span class="grayscale-value">0%</span>
+            </div>
+
+            <!-- Hue -->
+            <div class="hue filter">
+                <p id="hue-title">Hue</p>
+                <input class="hue-range" type="range">
+                <span class="hue-value">0deg</span>
+            </div>
+
+            <!-- Invert -->
+            <div class="invert filter">
+                <p id="invert-title">Invert</p>
+                <input class="invert-range" type="range">
+                <span class="invert-value">0%</span>
+            </div>
+
+            <!-- Opacity -->
+            <div class="opacity filter">
+                <p id="opacity-title">Opacity</p>
+                <input class="opacity-range" type="range">
+                <span class="opacity-value">100%</span>
+            </div>
+
+            <!-- Saturation -->
+            <div class="saturation filter">
+                <p id="saturation-title">Saturation</p>
+                <input class="saturation-range" type="range">
+                <span class="saturation-value">100%</span>
+            </div>
+
+            <!-- Sepia -->
+            <div class="sepia filter">
+                <p id="sepia-title">Sepia</p>
+                <input class="sepia-range" type="range">
+                <span class="sepia-value">0%</span>
+            </div>
+            
+        </div>
+
+    </main>
+
+</body>
+</html>
+
