@@ -55,7 +55,7 @@
             <!-- Radius -->
             <div class="radius filter">
                 <p id="radius-title">Radius</p>
-                <input class="radius-range" type="range">
+                <input class="radius-range" type="range" value="0" oninput="setRadiusValue(event)">
                 <span class="radius-value">0%</span>
             </div>
             
@@ -70,70 +70,71 @@
             <!-- Brightness -->
             <div class="brightness filter">
                 <p id="brightness-title">Brightness</p>
-                <input class="brightness-range" type="range">
-                <span class="brightness-value">10%</span>
+                <input class="brightness-range" type="range" value="50" oninput="setBrightnessValue(event)">
+                <span class="brightness-value">50%</span>
             </div>
 
             <!-- Blur -->
             <div class="blur filter">
                 <p id="blur-title">Blur</p>
-                <input class="blur-range" type="range">
+                <input class="blur-range" type="range" value="0" oninput="setBlurValue(event)">
                 <span class="blur-value">0px</span>
             </div>
 
             <!-- Contrast -->
             <div class="contrast filter">
                 <p id="contrast-title">Contrast</p>
-                <input class="contrast-range" type="range">
-                <span class="contrast-value">100%</span>
+                <input class="contrast-range" type="range" value="50" oninput="setContrastValue(event)">
+                <span class="contrast-value">50%</span>
             </div>
 
             <!-- Grayscale -->
             <div class="grayscale filter">
                 <p id="grayscale-title">Grayscale</p>
-                <input class="grayscale-range" type="range">
-                <span class="grayscale-value">0%</span>
+                <input class="grayscale-range" type="range" value="0" oninput="setGrayscaleValue(event)">
+                <span class="grayscale-value">0</span>
             </div>
 
             <!-- Hue -->
             <div class="hue filter">
                 <p id="hue-title">Hue</p>
-                <input class="hue-range" type="range">
+                <input class="hue-range" type="range" value="0" oninput="setHueValue(event)">
                 <span class="hue-value">0deg</span>
             </div>
 
             <!-- Invert -->
             <div class="invert filter">
                 <p id="invert-title">Invert</p>
-                <input class="invert-range" type="range">
-                <span class="invert-value">0%</span>
+                <input class="invert-range" type="range" value="0" oninput="setInvertValue(event)">
+                <span class="invert-value">0</span>
             </div>
 
             <!-- Opacity -->
             <div class="opacity filter">
                 <p id="opacity-title">Opacity</p>
-                <input class="opacity-range" type="range">
-                <span class="opacity-value">100%</span>
+                <input class="opacity-range" type="range" value="100" oninput="setOpacityValue(event)">
+                <span class="opacity-value">1</span>
             </div>
 
             <!-- Saturation -->
             <div class="saturation filter">
                 <p id="saturation-title">Saturation</p>
-                <input class="saturation-range" type="range">
-                <span class="saturation-value">100%</span>
+                <input class="saturation-range" type="range" value="0" oninput="setSaturateValue(event)">
+                <span class="saturation-value">0%</span>
             </div>
 
             <!-- Sepia -->
             <div class="sepia filter">
                 <p id="sepia-title">Sepia</p>
-                <input class="sepia-range" type="range">
-                <span class="sepia-value">0%</span>
+                <input class="sepia-range" type="range" value="0" oninput="setSepiaValue(event)">
+                <span class="sepia-value">0</span>
             </div>
             
         </div>
 
     </main>
 
+    <script src="./assets/Js/script.js"></script>
 </body>
 </html>
 
