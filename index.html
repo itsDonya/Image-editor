@@ -47,10 +47,10 @@
         
         <div class="setting-box">
                 <div class="setting-headers">
-                <!-- Setting Icon -->
-                <svg id="setting-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"/></svg>
-                <span class="line"></span>
-        </div>
+                    <!-- Setting Icon -->  
+                    <svg id="setting-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M331.8 224.1c28.29 0 54.88 10.99 74.86 30.97l19.59 19.59c40.01-17.74 71.25-53.3 81.62-96.65c5.725-23.92 5.34-47.08 .2148-68.4c-2.613-10.88-16.43-14.51-24.34-6.604l-68.9 68.9h-75.6V97.2l68.9-68.9c7.912-7.912 4.275-21.73-6.604-24.34c-21.32-5.125-44.48-5.51-68.4 .2148c-55.3 13.23-98.39 60.22-107.2 116.4C224.5 128.9 224.2 137 224.3 145l82.78 82.86C315.2 225.1 323.5 224.1 331.8 224.1zM384 278.6c-23.16-23.16-57.57-27.57-85.39-13.9L191.1 158L191.1 95.99l-127.1-95.99L0 63.1l96 127.1l62.04 .0077l106.7 106.6c-13.67 27.82-9.251 62.23 13.91 85.39l117 117.1c14.62 14.5 38.21 14.5 52.71-.0016l52.75-52.75c14.5-14.5 14.5-38.08-.0016-52.71L384 278.6zM227.9 307L168.7 247.9l-148.9 148.9c-26.37 26.37-26.37 69.08 0 95.45C32.96 505.4 50.21 512 67.5 512s34.54-6.592 47.72-19.78l119.1-119.1C225.5 352.3 222.6 329.4 227.9 307zM64 472c-13.25 0-24-10.75-24-24c0-13.26 10.75-24 24-24S88 434.7 88 448C88 461.3 77.25 472 64 472z"/></svg>
+                    <span class="line"></span>
+            </div>
             
             <!-- Radius -->
             <div class="radius filter">
@@ -70,65 +70,68 @@
             <!-- Brightness -->
             <div class="brightness filter">
                 <p id="brightness-title">Brightness</p>
-                <input class="brightness-range" type="range" value="50" oninput="setBrightnessValue(event)">
+                <input class="brightness-range range" type="range" value="50" oninput="setBrightnessValue(event)">
                 <span class="brightness-value">50%</span>
             </div>
 
             <!-- Blur -->
             <div class="blur filter">
                 <p id="blur-title">Blur</p>
-                <input class="blur-range" type="range" value="0" oninput="setBlurValue(event)">
+                <input class="blur-range range" type="range" value="0" oninput="setBlurValue(event)">
                 <span class="blur-value">0px</span>
             </div>
 
             <!-- Contrast -->
             <div class="contrast filter">
                 <p id="contrast-title">Contrast</p>
-                <input class="contrast-range" type="range" value="50" oninput="setContrastValue(event)">
+                <input class="contrast-range range" type="range" value="50" oninput="setContrastValue(event)">
                 <span class="contrast-value">50%</span>
             </div>
 
             <!-- Grayscale -->
             <div class="grayscale filter">
                 <p id="grayscale-title">Grayscale</p>
-                <input class="grayscale-range" type="range" value="0" oninput="setGrayscaleValue(event)">
+                <input class="grayscale-range range" type="range" value="0" oninput="setGrayscaleValue(event)">
                 <span class="grayscale-value">0</span>
             </div>
 
             <!-- Hue -->
             <div class="hue filter">
                 <p id="hue-title">Hue</p>
-                <input class="hue-range" type="range" value="0" oninput="setHueValue(event)">
+                <input class="hue-range range" type="range" value="0" oninput="setHueValue(event)">
                 <span class="hue-value">0deg</span>
             </div>
 
             <!-- Invert -->
             <div class="invert filter">
                 <p id="invert-title">Invert</p>
-                <input class="invert-range" type="range" value="0" oninput="setInvertValue(event)">
+                <input class="invert-range range" type="range" value="0" oninput="setInvertValue(event)">
                 <span class="invert-value">0</span>
             </div>
 
             <!-- Opacity -->
             <div class="opacity filter">
                 <p id="opacity-title">Opacity</p>
-                <input class="opacity-range" type="range" value="100" oninput="setOpacityValue(event)">
+                <input class="opacity-range range" type="range" value="100" oninput="setOpacityValue(event)">
                 <span class="opacity-value">1</span>
             </div>
 
             <!-- Saturation -->
             <div class="saturation filter">
                 <p id="saturation-title">Saturation</p>
-                <input class="saturation-range" type="range" value="0" oninput="setSaturateValue(event)">
+                <input class="saturation-range range" type="range" value="0" oninput="setSaturateValue(event)">
                 <span class="saturation-value">0%</span>
             </div>
 
             <!-- Sepia -->
             <div class="sepia filter">
                 <p id="sepia-title">Sepia</p>
-                <input class="sepia-range" type="range" value="0" oninput="setSepiaValue(event)">
+                <input class="sepia-range range" type="range" value="0" oninput="setSepiaValue(event)">
                 <span class="sepia-value">0</span>
             </div>
+
+            <!-- Save Button -->
+            <button class="save">Save</button> <!-- Doesn't work. Wait for next update. -->
             
         </div>
 

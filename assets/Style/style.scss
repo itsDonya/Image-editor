@@ -210,3 +210,20 @@ main {
         display: none;
     }
 }
+
+.save {
+    color: white;
+    display: inline-block;
+    width: 110px;
+    padding: .6rem 1rem;
+    border: none;
+    background: linear-gradient(to left, #D6A4A4, #DAE2F8);
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px #aaa;
+    &:hover {
+        filter: brightness(94%);
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        box-shadow: 0px 4px 12px #aaa;
+    }
+}
