@@ -119,12 +119,22 @@ function setSepiaValue(e) {
 
 function updateFilters() {
 
-    image.style.webkitFilter = `brightness(${brightness*2}%) blur(${Blur/10}px) contrast(${contrast*2}%) grayscale(${grayscale/100}) hue-rotate(${hue*5}deg) invert(${invert/100}) opacity(${opacity/100}) saturate(${saturate+1}) sepia(${sepia/100})`;
+    image.style.webkitFilter = `brightness(${brightness*2}%) blur(${Blur/10}px) contrast(${contrast*2}%) grayscale(${grayscale/100}) hue-rotate(${hue*5}deg) invert(${invert/100}) opacity(${opacity/100}) saturate(${saturate+1}) sepia(${sepia/100}) drop-shadow(0px 0px 10px #313131)`;
 
-    image.style.filter = `brightness(${brightness*2}%) blur(${Blur/4}px) contrast(${contrast*2}%) grayscale(${grayscale/100}) hue-rotate(${hue*5}deg) invert(${invert/100}) opacity(${opacity/100}) saturate(${saturate+1}) sepia(${sepia/100})`;
+    image.style.filter = `brightness(${brightness*2}%) blur(${Blur/4}px) contrast(${contrast*2}%) grayscale(${grayscale/100}) hue-rotate(${hue*5}deg) invert(${invert/100}) opacity(${opacity/100}) saturate(${saturate+1}) sepia(${sepia/100}) drop-shadow(0px 0px 10px #313131)`;
 
 }
 
 rangeInputs.forEach(input => {
     input.addEventListener("input", updateFilters)
 });
+
+// Switch Theme
+const themeModeBtn = document.getElementById("theme");
+themeModeBtn.addEventListener("change", (e) => {
+    if(e.target.checked) {
+        document.documentElement.setAttribute("theme-mode", "dark")
+    } else {
+        document.documentElement.setAttribute("theme-mode", "light")
+    }
+})
