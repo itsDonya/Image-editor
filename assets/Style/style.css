@@ -201,11 +201,8 @@ main {
           align-items: center;
 }
 
-.display-box div {
-  height: 100%;
-}
-
 .display-box div:nth-child(1) {
+  height: 100%;
   width: 94%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,6 +239,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.6rem;
+}
+
+.display-box div:nth-child(2) input {
+  display: none;
 }
 
 .display-box div:nth-child(2) svg {

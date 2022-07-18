@@ -108,7 +108,6 @@ main {
     @include flex(row, space-evenly, center);
 }
 
-
 .display-box, .setting-box {
     height: 94%;
     background-color: #ffffff;
@@ -120,8 +119,8 @@ main {
     width: 68%;
     @include flex(row, space-between, center);
     div {
-        height: 100%;
         &:nth-child(1) {
+            height: 100%;
             width: 94%;
             @include flex(row, center, center);
             img {
@@ -132,6 +131,9 @@ main {
             width: 6%;
             @include flex(column, center, center);
             gap: 1.6rem;
+            input {
+                display: none;
+            }
             svg {
                 @include size(24px, 24px);
                 &:hover {

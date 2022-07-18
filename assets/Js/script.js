@@ -1,6 +1,28 @@
-const image = document.querySelector("#image");
 const saveBtn = document.querySelector(".save");
 const rangeInputs = document.querySelectorAll(".range");
+
+// ----------------- Upload Image -----------------
+
+const image = document.querySelector("#image");
+
+function read(e) {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      image.src = event.target.result;
+    }
+    reader.readAsDataURL(e.files[0]);
+}
+
+// ----------------- Delete Image -----------------
+
+const deleteBtn = document.getElementById("delete-icon");
+
+function deleteImg() {
+    image.src = "";
+}
+deleteBtn.addEventListener("click", deleteImg)
+
+// ----------------- Set filters -----------------
 
 let brightness = 29;
 let Blur = 0;
@@ -105,4 +127,4 @@ function updateFilters() {
 
 rangeInputs.forEach(input => {
     input.addEventListener("input", updateFilters)
-})
+});
